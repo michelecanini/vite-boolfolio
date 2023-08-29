@@ -16,8 +16,8 @@ export default {
 </script>
 
 <template lang="">
-    <div>
-        ciao
+    <div class="container">
+        Boolfolio
     </div>
 </template>
 
