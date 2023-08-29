@@ -17,7 +17,7 @@ export default {
 
 <template lang="">
     <div class="container">
-        Boolfolio
+        
     </div>
 </template>
 
