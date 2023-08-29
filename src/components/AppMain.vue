@@ -6,7 +6,7 @@ export default {
 
 <template lang="">
     <div>
-        
+        ciao
     </div>
 </template>
 
