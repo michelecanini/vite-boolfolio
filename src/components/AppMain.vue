@@ -1,8 +1,12 @@
 <script>
+import AppLoader from './AppLoader.vue';
 import axios from 'axios';
 
 export default {
     name: 'AppMain', 
+    components:{
+        AppLoader
+    },
     data() {
         return {
             baseUrl: 'http://localhost:8000',
@@ -31,8 +35,14 @@ export default {
 </script>
 
 <template lang="">
-    <div class="container">
+    <AppLoader v-if="loading" />
+    <div v-else class="container">
+        <div class="row">
+            <div class="col-12" v-for="project in projects" :key="project.id">
+                {{ project.title }}
 
+            </div>
+        </div>
     </div>
 </template>
 
