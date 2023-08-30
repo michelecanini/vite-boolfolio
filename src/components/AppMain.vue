@@ -45,11 +45,13 @@ export default {
     <div v-else class="container">
         <div class="row">
             <div class="col-12 col-md-4 mb-5 " v-for="project in projects" :key="project.id">
-                <div class="card">
+                <div class="card bg-light">
                     <div class="card-body">
-                        <img :src="`${baseUrl}/storage/${project.thumb}`" class="card-img-top img-fluid mt-3" alt="{{ project.title }}">
+                        <div class="text-end"><span class="badge text-bg-info">{{ project.type.name }}</span></div>
+                        <img :src="`${baseUrl}/storage/${project.thumb}`" class="card-img-top img-fluid mt-1" alt="{{ project.title }}">
                         <h5 class="card-title text-black mt-3">{{ project.title }}</h5>
-                        <p class=" text-black mt-3">{{ truncateText(project.description) }}</p>
+                        <div><span class="badge text-bg-warning me-1" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span></div>
+                        <p class=" text-black mt-3">{{ truncateText(project.description) }}</p>      
                         <a href="{{ project.github }}" target="_blank" class="btn btn-primary mt-3 me-2">GitHub</a>
                         <a href="{{ project.demo }}" target="_blank" class="btn btn-secondary mt-3">Demo</a>
                     </div>

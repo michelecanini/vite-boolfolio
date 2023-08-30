@@ -13,7 +13,7 @@ export default {
 <template lang="">
 
     <!-- section jumbotron -->
-    <section class="jumbotron container-xl px-3 px-md-4 px-lg-5 mt-2 py-5 ">
+    <section class="jumbotron container-xl px-3 px-md-4 px-lg-5 mt-2 py-5">
         <div class="row">
             <div class="col-sm-3">
                 <div>
@@ -31,7 +31,7 @@ export default {
                 </h1>
                 
                 <div>
-                    <div class="Box-body p-4 mt-5 border border-secondary" style="
+                    <div class="Box-body p-4 mt-5 border border-secondary bg-light" style="
                     border-radius: 20px;" >
                         
                         <article class="markdown-body entry-content container-lg f5" itemprop="text"><h3 dir="auto"><a id="user-content--hi-im-michelecanini-j-full-stack-web-dev" class="anchor" aria-hidden="true" href="#-hi-im-michelecanini-j-full-stack-web-dev"></a><g-emoji class="g-emoji" alias="wave" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png">👋</g-emoji> Hi, I’m <a href="https://github.com/michelecanini">@michelecanini</a> J. Full-Stack Web Dev.</h3>
