@@ -29,6 +29,12 @@ export default {
 
                 }
             })
+        },
+        truncateText(text){
+            if (text.length > 50){
+                return text.substr(0,90) + '...';
+            }
+            return text;
         }
     },
 }
@@ -43,6 +49,7 @@ export default {
                     <div class="card-body">
                         <img :src="`${baseUrl}/storage/${project.thumb}`" class="card-img-top img-fluid mt-3" alt="{{ project.title }}">
                         <h5 class="card-title text-black mt-3">{{ project.title }}</h5>
+                        <p class=" text-black mt-3">{{ truncateText(project.description) }}</p>
                         <a href="{{ project.github }}" target="_blank" class="btn btn-primary mt-3 me-2">GitHub</a>
                         <a href="{{ project.demo }}" target="_blank" class="btn btn-secondary mt-3">Demo</a>
                     </div>
