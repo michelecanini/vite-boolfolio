@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div>
-    <AppHeader />
+   <AppHeader />
     <AppJumbotron />
     <AppMain />
   </div>
