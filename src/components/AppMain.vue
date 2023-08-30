@@ -41,7 +41,7 @@ export default {
             <div class="col-12 col-md-4 mb-5 " v-for="project in projects" :key="project.id">
                 <div class="card">
                     <div class="card-body">
-                        <!-- <img :src="`${baseUrl}/${project.thumb}`" class="card-img-top img-fluid mt-3" alt="{{ project.title }}"> -->
+                        <img :src="`${baseUrl}/storage/${project.thumb}`" class="card-img-top img-fluid mt-3" alt="{{ project.title }}">
                         <h5 class="card-title text-black">{{ project.title }}</h5>
                         <a href="{{ project.github }}" target="_blank" class="btn btn-primary d-inline">GitHub</a>
                         <a href="{{ project.demo }}" target="_blank" class="btn btn-secondary d-inline">Demo</a>
