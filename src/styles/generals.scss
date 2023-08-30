@@ -1,2 +1,9 @@
 @import "/node_modules/fortawesome/fontawesome-free/css/all.min.css"; // import fontawesome
 @import "/node_modules/bootstrap/scss/bootstrap.scss"; // import bootstrap
+
+body{
+    height: 100vh;
+    //background-color: #1a202c;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}

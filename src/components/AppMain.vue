@@ -42,9 +42,9 @@ export default {
                 <div class="card">
                     <div class="card-body">
                         <img :src="`${baseUrl}/storage/${project.thumb}`" class="card-img-top img-fluid mt-3" alt="{{ project.title }}">
-                        <h5 class="card-title text-black">{{ project.title }}</h5>
-                        <a href="{{ project.github }}" target="_blank" class="btn btn-primary d-inline">GitHub</a>
-                        <a href="{{ project.demo }}" target="_blank" class="btn btn-secondary d-inline">Demo</a>
+                        <h5 class="card-title text-black mt-3">{{ project.title }}</h5>
+                        <a href="{{ project.github }}" target="_blank" class="btn btn-primary mt-3 me-2">GitHub</a>
+                        <a href="{{ project.demo }}" target="_blank" class="btn btn-secondary mt-3">Demo</a>
                     </div>
                 </div>
             </div>
