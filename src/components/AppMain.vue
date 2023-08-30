@@ -1,4 +1,5 @@
 <script>
+
 import AppLoader from './AppLoader.vue';
 import axios from 'axios';
 
@@ -12,23 +13,37 @@ export default {
             baseUrl: 'http://localhost:8000',
             projects: '[]',
             loading: true,
+            currentPage: 1,
+            lastPage: null,
         }
     },
     created() {
-        this.getProjects();
+        this.getProjects(1);
     },
     methods: {
-        getProjects(){
+        getProjects(num_page){
             this.loading = true;
-            axios.get(`${this.baseUrl}/api/projects`).then((response) => {
-                if (response.data.success){
-                    this.projects = response.data.results;
-                    this.loading = false;
-                }
-                else{
 
-                }
-            })
+            axios.get(`${this.baseUrl}/api/projects`, {params: {page: num_page}}).then ((response) => {
+                this.projects = response.data.results.data;
+                this.currentPage = response.data.results.current_page;
+                this.lastPage = response.data.results.last_page;
+                this.loading = false;
+            });
+
+
+            // CHIAMATA SENZA PAGINAZIONE (NO PARAMETRI)
+            //axios.get(`${this.baseUrl}/api/projects`).then((response) => {
+            //    if (response.data.success){
+
+            //        this.projects = response.data.results; SENZA PAGINAZIONE
+            //        this.projects = response.data.results.data; // CON PAGINAZIONE
+            //        this.loading = false;
+            //  }
+            //  else{
+
+                
+            
         },
         truncateText(text){
             if (text.length > 50){
@@ -38,6 +53,8 @@ export default {
         }
     },
 }
+
+
 </script>
 
 <template lang="">
@@ -55,6 +72,22 @@ export default {
                         <a href="{{ project.github }}" target="_blank" class="btn btn-primary mt-3 me-2">GitHub</a>
                         <a href="{{ project.demo }}" target="_blank" class="btn btn-secondary mt-3">Demo</a>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                    <nav>
+                        <ul class="pagination">
+                            <li :class="currentPage === 1 ? 'disabled' : ''">
+                                <button type="button" class="page-link" @click="getProjects(currentPage - 1)"><i class="fa-solid fa-angles-left"></i> Progetti Precedenti</button>
+                            </li>
+                            <li :class="currentPage === lastPage ? 'disabled' : ''">
+                                <button type="button" class="page-link" @click="getProjects(currentPage + 1)">Progetti Successivi <i class="fa-solid fa-angles-right"></i></button>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

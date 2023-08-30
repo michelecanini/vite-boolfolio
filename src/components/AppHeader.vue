@@ -1,11 +1,12 @@
 
 
 <script>
+
 export default {
     name: 'AppHeader', 
     data() {
         return {
-            
+            loading: true,
         }
     },
     created() {
@@ -18,7 +19,6 @@ export default {
 </script>
 
 <template lang="">
-
     <header>
         <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-light">
             <div class="container">
@@ -33,22 +33,14 @@ export default {
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                        
-                        </li>
+                        <li class="nav-item"></li>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        
-                        <li class="nav-item">
-                        
-                        </li>
-                        
+                    <ul class="navbar-nav ml-auto">   
+                        <li class="nav-item"></li>
                     </ul>
                 </div>
             </div>

@@ -20,9 +20,6 @@ export default {
                     <img style="height:auto; width: 100%;
                     border-radius: 20px;" alt="" src="https://avatars.githubusercontent.com/u/127045851?v=4" width="260" height="260" class="avatar avatar-user width-full border color-bg-default border border-secondary">
                 </div>   
-                <div class="player justify-content-end mt-5">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4Zjli1P13J5mmSCD5iKAXK?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
             </div>
             
             <div class="col-sm-9">
@@ -43,9 +40,6 @@ export default {
                         </article>
                     </div>
                 </div>   
-                <div class="mt-3">   
-                    <h5 class="col-sm-12 mt-5 fs-4">This Project: "Boolfolio" is the Front-end component made with Vite + VueJS, connected via Api, to the Back-end component built with Bootstrap 5 and Laravel 9.2 including Laravel breeze and blade. Contains some of the code projects executed with the Boolean school, and here you find my favorite playlist, that I listened to during this adventure.</h5>
-                </div>
             </div>
         </div>
     </section>
