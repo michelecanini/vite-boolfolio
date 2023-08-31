@@ -6,7 +6,23 @@ export default {
     name: 'AppHeader', 
     data() {
         return {
-            loading: true,
+            menuItems: [
+                {
+                    label: 'Project'
+                },
+                {
+                    label: 'About'
+                },
+                {
+                    label: 'Types'
+                },
+                {
+                    label: 'Technologies'
+                },
+                {
+                    label: 'Contact'
+                },
+            ]
         }
     },
     created() {
@@ -19,34 +35,23 @@ export default {
 </script>
 
 <template lang="">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-light">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                    <div>
-                        <!--logo-->
-                        <div>Boolfolio</div>
-                        <!--mobile-logo
-                        <img src="./img/mobile-logo.png" alt="logo" class="mobile_logo"> -->
-                    </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"></li>
-                    </ul>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">   
-                        <li class="nav-item"></li>
-                    </ul>
-                </div>
+    
+            <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-md">
+            <a class="navbar-brand" href="#">Boolfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item" v-for="(items, index) in menuItems" :key="index">
+                    <a class="nav-link" aria-current="page" href="#">{{ item.label }}</a>
+                </li>
+            </ul>
             </div>
+        </div>
         </nav>
-    </header>
-
+        
 </template>
 
 <style lang="">
