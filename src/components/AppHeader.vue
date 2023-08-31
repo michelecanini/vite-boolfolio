@@ -8,7 +8,12 @@ export default {
         return {
             menuItems: [
                 {
-                    label: 'Project'
+                    label: 'HomePage',
+                    routeName: 'home'
+                },
+                {
+                    label: 'Project',
+                    routeName: 'projects'
                 },
                 {
                     label: 'About'
@@ -22,6 +27,7 @@ export default {
                 {
                     label: 'Contact'
                 },
+                
             ]
         }
     },
@@ -44,8 +50,8 @@ export default {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item" v-for="(items, index) in menuItems" :key="index">
-                    <a class="nav-link" aria-current="page" href="#">{{ item.label }}</a>
+                <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
+                    <a class="nav-link" href="#">{{ item.label }}</a>
                 </li>
             </ul>
             </div>
