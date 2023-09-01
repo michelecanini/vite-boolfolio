@@ -51,7 +51,7 @@ export default {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
-                    <a class="nav-link" href="#">{{ item.label }}</a>
+                    <router-link class="nav-link" :to="{ name: item.routeName }">{{ item.label }}</router-link>
                 </li>
             </ul>
             </div>
