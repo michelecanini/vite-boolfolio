@@ -42,7 +42,7 @@ export default {
 
 <template lang="">
     
-            <nav class="navbar navbar-expand-lg bg-secondary">
+            <nav class="navbar navbar-expand-lg bg-light border-bottom">
         <div class="container-md">
             <a class="navbar-brand" href="#">Boolfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
