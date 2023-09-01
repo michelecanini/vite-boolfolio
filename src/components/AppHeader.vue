@@ -8,7 +8,7 @@ export default {
         return {
             menuItems: [
                 {
-                    label: 'HomePage',
+                    label: 'Home',
                     routeName: 'home'
                 },
                 {
