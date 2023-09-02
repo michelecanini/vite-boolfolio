@@ -1,12 +1,15 @@
 <script>
 
 import AppLoader from '../components/AppLoader.vue';
+import AppJumbotron from '../components/AppJumbotron.vue';
+
 import axios from 'axios';
 
 export default {
     name: 'ProjectList', 
     components:{
-        AppLoader
+        AppLoader,
+        AppJumbotron
     },
     data() {
         return {
@@ -55,6 +58,11 @@ export default {
 </script>
 
 <template lang="">
+
+    <div>
+     <AppJumbotron />
+    </div>
+
     <AppLoader v-if="loading" />
     <div v-else class="container">
         <div class="row">

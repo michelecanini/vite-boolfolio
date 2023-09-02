@@ -12,7 +12,7 @@ export default {
                 //    routeName: 'home'
                 //},
                 {
-                    label: 'Project',
+                    label: 'Projects',
                     routeName: 'projects'
                 },
                 {
@@ -20,7 +20,8 @@ export default {
                     routeName: 'about'
                 },
                 {
-                    label: 'Types'
+                    label: 'Types',
+                    routeName: 'types'
                 },
                 {
                     label: 'Technologies'
