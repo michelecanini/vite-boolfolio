@@ -31,7 +31,6 @@ export default {
                 this.loading = false;
             });
 
-
             // CHIAMATA SENZA PAGINAZIONE (NO PARAMETRI)
             //axios.get(`${this.baseUrl}/api/projects`).then((response) => {
             //    if (response.data.success){
@@ -42,8 +41,6 @@ export default {
             //  }
             //  else{
 
-                
-            
         },
         truncateText(text){
             if (text.length > 50){

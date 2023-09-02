@@ -16,9 +16,17 @@ export default {
                     </div>
                 </div>
                 
-                <div class="col-sm-9">  
+                <div class="col-sm-6">  
                     <div class="mt-3">   
-                        <h5 class="col-sm-12 mt-5 fs-4 text-white">This Project: "Boolfolio" is the Front-end component made with Vite + VueJS, connected via Api, to the Back-end component built with Bootstrap 5 and Laravel 9.2 including Laravel breeze and blade. Contains some of the code projects executed with the Boolean school, and here you find my favorite playlist, that I listened to during this adventure.</h5>
+                        <h5 class="col-sm-12 mt-5 text-white">This Project: "Boolfolio" is the Front-end component made with Vite + VueJS, connected via Api, to the Back-end component built with Bootstrap 5 and Laravel 9.2 including Laravel breeze and blade. Contains some of the code projects executed with the Boolean school, and here you find my favorite playlist, that I listened to during this adventure.</h5>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">   
+                    <div class="player justify-content-end mt-5 text-white">
+                        <a href="#"><h6>Privacy Policy</h6></a>
+                        <a href="#"><h6>Cookie Policy</h6></a>
+                        <a href="#"><h6>Termini e Condizioni</h6></a>
                     </div>
                 </div>
             </div>

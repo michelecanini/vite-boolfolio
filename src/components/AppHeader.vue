@@ -7,16 +7,17 @@ export default {
     data() {
         return {
             menuItems: [
-                {
-                    label: 'Home',
-                    routeName: 'home'
-                },
+                //{
+                //    label: 'Home',
+                //    routeName: 'home'
+                //},
                 {
                     label: 'Project',
                     routeName: 'projects'
                 },
                 {
-                    label: 'About'
+                    label: 'About',
+                    routeName: 'about'
                 },
                 {
                     label: 'Types'
@@ -44,7 +45,7 @@ export default {
     
             <nav class="navbar navbar-expand-lg bg-light border-bottom">
         <div class="container-md">
-            <a class="navbar-brand" href="#">Boolfolio</a>
+            <a class="navbar-brand" href="/">Boolfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
