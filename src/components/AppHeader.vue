@@ -24,9 +24,6 @@ export default {
                     routeName: 'types'
                 },
                 {
-                    label: 'Technologies'
-                },
-                {
                     label: 'Contact'
                 },
                 

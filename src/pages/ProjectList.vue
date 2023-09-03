@@ -75,7 +75,8 @@ export default {
                         <div><span class="badge text-bg-warning me-1" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span></div>
                         <p class=" text-black mt-3">{{ truncateText(project.description) }}</p>      
                         <a :href="project.github" target="_blank" class="btn btn-primary mt-3 me-2">GitHub</a>
-                        <a :href="project.demo" target="_blank" class="btn btn-secondary mt-3">Demo</a>
+                        <a :href="project.demo" target="_blank" class="btn btn-secondary mt-3 me-2">Demo</a>
+                        <router-link :to="{name: 'show-project', params: {slug: project.slug}}" target="_blank" class="btn btn-success mt-3">Show</router-link>
                     </div>
                 </div>
             </div>
