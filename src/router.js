@@ -37,9 +37,18 @@ const router = createRouter({
             component: TypesList
         },
         {
-            path: '/*',
+            //path: '/*',
+            //name: 'not-found',
+            //component: NotFound,
+        },
+        {
+            path: '/pagina-non-trovata',
             name: 'not-found',
             component: NotFound
+        },
+        {
+            path: '/:cathAll(.*)',
+            redirect: '/pagina-non-trovata',
         },
     ]
 })
