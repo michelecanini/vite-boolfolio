@@ -5,7 +5,7 @@ import ProjectList from './pages/ProjectList.vue';
 import ShowProject from './pages/ShowProject.vue';
 import About from './pages/About.vue';
 import TypesList from './pages/TypesList.vue';
-
+import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -35,6 +35,11 @@ const router = createRouter({
             path: '/types',
             name: 'types',
             component: TypesList
+        },
+        {
+            path: '/*',
+            name: 'not-found',
+            component: NotFound
         },
     ]
 })
