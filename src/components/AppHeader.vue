@@ -24,7 +24,8 @@ export default {
                     routeName: 'types'
                 },
                 {
-                    label: 'Contact'
+                    label: 'Contact',
+                    routeName: 'contact'
                 },
                 
             ]
