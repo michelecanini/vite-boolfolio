@@ -62,27 +62,21 @@ export default {
             </div>
             <div class="row ">
                 <div class="col-12 col-md-6 mx-auto">
+                    <p v-for="(error, index) in errors" :key="index" class="text-danger">
+                                {{ error }}
+                            </p>
                     <form @submit.prevent="sendForm()" class="row">
                         <div class="col-12 ">
                             <label class="control-label">Nome e Cognome</label>
                             <input type="text" name="name" id="name" v-model="name" placeholder="Name" class="form-control mb-5" :class="errors.name ? 'is-invalid' : ''" >
-                            <p v-for="(error, index) in errors" :key="index" class="text-danger">
-                                {{ error }}
-                            </p>
                         </div>
                         <div class="col-12 ">
                             <label class="control-label">Email</label>
                             <input type="mail" name="email" id="email" v-model="email" placeholder="Email" class="form-control mb-5" :class="errors.email ? 'is-invalid' : ''" >
-                            <p v-for="(error, index) in errors" :key="index" class="text-danger">
-                                {{ error }}
-                            </p>
                         </div>
                         <div class="col-12">
                             <label class="control-label">Messaggio</label>
                             <textarea class="form-control mb-5" name="message" id="message" v-model="message" placeholder="Messaggio" :class="errors.message ? 'is-invalid' : ''"></textarea>
-                            <p v-for="(error, index) in errors" :key="index" class="text-danger">
-                                {{ error }}
-                            </p>
                         </div>
                         <div class="col-12">
                             <button class="btn btn-sm btn-success" type="submit" :disabled="loading">{{ loading ? 'Invio email in corso' :'Invia' }}</button>
