@@ -9,6 +9,7 @@ export default {
     },
     data(){
         return{
+            baseUrl: 'http://localhost:8000',
             loading: false,
             name:'',
             email:'',
@@ -28,7 +29,7 @@ export default {
 
             this.errors = {};
 
-            axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
+            axios.post(`${this.baseUrl}/api/contacts`, data).then((response) => {
                 this.success = response.data.success;
                 if(!this.success){
                     this.errors = response.data.errors;
@@ -61,7 +62,7 @@ export default {
             </div>
             <div class="row ">
                 <div class="col-12 col-md-6 mx-auto">
-                    <form @submit="sendForm()" class="row">
+                    <form @submit.prevent="sendForm()" class="row">
                         <div class="col-12 ">
                             <label class="control-label">Nome e Cognome</label>
                             <input type="text" name="name" id="name" v-model="name" placeholder="Name" class="form-control mb-5" :class="errors.name ? 'is-invalid' : ''" >
