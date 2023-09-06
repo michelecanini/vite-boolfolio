@@ -55,20 +55,20 @@ export default {
                     <div class="col-12 ">
                         <h2 class="text-center mt-5 mb-5">Contattaci</h2>
                     </div>
-                    <div v-if="success" class="alert alert-success">
-                        Messaggio inviato con Successo
-                    </div>
                 </div> 
             </div>
             <div class="row ">
                 <div class="col-12 col-md-6 mx-auto">
+                    <div v-if="success" class="alert alert-success">
+                        Messaggio inviato con Successo
+                    </div>
                     <p v-for="(error, index) in errors" :key="index" class="text-danger">
                                 {{ error }}
                             </p>
                     <form @submit.prevent="sendForm()" class="row">
                         <div class="col-12 ">
                             <label class="control-label">Nome e Cognome</label>
-                            <input type="text" name="name" id="name" v-model="name" placeholder="Name" class="form-control mb-5" :class="errors.name ? 'is-invalid' : ''" >
+                            <input type="text" name="name" id="name" v-model="name" placeholder="Nome" class="form-control mb-5" :class="errors.name ? 'is-invalid' : ''" >
                         </div>
                         <div class="col-12 ">
                             <label class="control-label">Email</label>
